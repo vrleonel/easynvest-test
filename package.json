@@ -1,0 +1,21 @@
+{
+  "name": "showroom-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node app.js",
+    "startNodemon": "nodemon app.js"
+  },
+  "author": "Vitor Leonel",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "*",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "*",
+    "gulp-watch": "^4.3.1"
+  }
+}

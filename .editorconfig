@@ -1,0 +1,24 @@
+; EditorConfig is awesome: http://editorconfig.org/
+
+root = true  ; top-most EditorConfig file
+
+; Unix-style newlines with a newline ending every file
+;end_of_line = lf
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+; 2 space indentation
+[*.{js,jsp,tag,xml,json,vm}]
+indent_style = space
+indent_size = 2
+
+[*.html]
+indent_style = space
+indent_size = 2
+
+# Estilo de identação em arquivos less
+[*.{less,sass,css}]
+indent_style = space
+indent_size = 2
