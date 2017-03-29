@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp'),
 	watch = require('gulp-watch'),
 	browserify = require('gulp-browserify'),
@@ -25,6 +26,20 @@ gulp.task('browserify', function() {
       }))
       .pipe(gulp.dest('./dist'))
 });
+
+
+//
+// var sass = require('gulp-sass');
+//
+// gulp.task('sass', function () {
+//   return gulp.src('./sass/**/*.scss')
+//     .pipe(sass.sync().on('error', sass.logError))
+//     .pipe(gulp.dest('./css'));
+// });
+//
+// gulp.task('sass:watch', function () {
+//   gulp.watch('./sass/**/*.scss', ['sass']);
+// });
 
 gulp.task('watch', function() {
   gulp.watch('./src/**/*.js', ['browserify']);
