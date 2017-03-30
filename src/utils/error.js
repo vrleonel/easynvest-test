@@ -1,11 +1,9 @@
 module.exports = function(){
 
-  var pluginName = "Showcase API",
+  var pluginName = "Easynvest",
     errorTypes = {
-      "sku"     : "SKU(s) not found!",
-      "apiurl"  : "API url not found!",
-      "view"    : "view.render()",
-      "default" : "Unknown Error!"
+      "erro"     : " Erro 1 ",
+      "error2"   : "Erro 2"
     };
 
   /**

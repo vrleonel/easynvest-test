@@ -5,17 +5,18 @@ module.exports = function(config, error){
 		view = require('./../view/view.js')(utils.event, utils.dom, error),
 		eventHandler = utils.event;
 
-	eventHandler.addEventListener("ScopesFromView", readScopes);
-	eventHandler.addEventListener("SKUsFromModel", renderView);
+	eventHandler.addEventListener("LoadItems", readItems);
+
+
 
 	view.start();
 
+  function readItems (response) {
+    model.populate(response);
+  }
+
 	function renderView(response){
 		view.render(response);
-	}
-
-	function readScopes(response){
-		model.getSKUs(response);
 	}
 
 }
