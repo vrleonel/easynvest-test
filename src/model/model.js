@@ -9,7 +9,8 @@ module.exports = function(event, DOMUtils, ajax, error){
     console.log(obj[key]);
 
     var input = obj.map( (item) => {
-      return '<input class=${item["class"]}>';
+      return `<input class=${item["class"]}>`;
+
     });
 
     return input;
@@ -21,7 +22,7 @@ module.exports = function(event, DOMUtils, ajax, error){
       let dom = "";
       let obj = elem.fields;
       let items = Object.keys(obj).map( (key) => {
-        //return obj[key];
+        return obj[key];
         console.log(createInput(key, obj[key]));
       });
       console.log("items", items);

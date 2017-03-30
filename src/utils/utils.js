@@ -29,7 +29,7 @@ module.exports = function(config){
       if(xhr.readyState == 4 && xhr.status == 200)
         callback.call(this, xhr.response);
       }
-      
+
       xhr.open("GET", url);
       xhr.responseType = "json";
       xhr.send();

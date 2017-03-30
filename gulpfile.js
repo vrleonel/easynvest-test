@@ -1,7 +1,7 @@
 'use stric';
 const gulp = require('gulp');
 const	watch = require('gulp-watch');
-  // sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 const	browserify = require('gulp-browserify');
 const uglify = require('gulp-uglify');
 const	concat = require('gulp-concat');
@@ -53,8 +53,9 @@ function theError(error){
 
 gulp.task('browserify', function() {
     gulp.src('./src/*.js')
-      .pipe(browserify())
-      //.transform("babelify", {presets: ["es2015", "react"]})
+      .pipe(browserify({
+        transform : 'babelify'
+      }))
       .pipe(gulp.dest('./test'))
       .on('error', theError)
       .pipe(uglify())
