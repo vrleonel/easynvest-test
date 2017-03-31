@@ -1,23 +1,27 @@
 module.exports = function(event, DOMUtils, error){
   //console.log('view carregada');
-  var DOMToArray = DOMUtils.DOMToArray;
+  const DOMToArray = DOMUtils.DOMToArray;
+  const formElement = document.querySelector("form");
 
 
   var start = function(){
-    console.log("Teste");
     event.dispatchEvent("LoadItems", {item: 1} );
   }
 
 
 
-  var render = function () {
-
+  var render = function (response) {
+    console.log(formElement);
+    console.log(response);
+    formElement.innerHTML += response.join("")
+    //formElement.appendChild();
   }
 
 
 
   return {
-    start : start
+    start : start,
+    render : render
 
   }
 }

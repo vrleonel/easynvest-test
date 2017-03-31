@@ -1,13 +1,13 @@
 {
   "fields": {
-    "input": {
+    "input": [{
       "name": "txtFullname",
       "id": "txtFullname",
       "value": "",
       "type": "text",
       "class": "input"
     },
-    "input": {
+    {
       "name": "txtCpf",
       "id": "txtCpf",
       "value": "",
@@ -15,7 +15,7 @@
       "Mask": "000.000.000-00",
       "class": "input"
     },
-    "input": {
+    {
       "name": "txtTelephone",
       "id": "txtTelefone",
       "value": "",
@@ -23,25 +23,26 @@
       "Mask": "(00) 00000-0000",
       "class": "input"
     },
-    "input": {
+    {
       "name": "txtAddress",
       "id": "txtAddress",
       "value": "",
       "type": "text",
       "class": "input"
     },
-    "map": {
-      "name": "mapRenderer",
-      "id": "mapRenderer",
-      "class": "map-renderer"
-    },
-    "input": {
+    {
       "name": "txtComplement",
       "id": "txtComplement",
       "value": "",
       "type": "text",
       "class": "input"
+    }],
+    "map": {
+      "name": "mapRenderer",
+      "id": "mapRenderer",
+      "class": "map-renderer"
     },
+
     "upload": {
       "name": "uplImage",
       "id": "uplImage",

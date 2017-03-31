@@ -3,7 +3,7 @@
 
   function start(){
     var config  =  {
-          apiUrl : "../src/static/api/mock.json",
+          apiUrl : "../src/static/api/mock2.json",
           cross : false
         },
         error = require('./utils/error.js')();

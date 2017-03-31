@@ -3,13 +3,13 @@ module.exports = function(config, error){
 	var utils = require('./../utils/utils.js')(config),
 		model = require('./../model/model.js')(utils.event, utils.dom, utils.ajax, error),
 		view = require('./../view/view.js')(utils.event, utils.dom, error),
-		eventHandler = utils.event;
+		eventHandler = utils.event,
+    response;
 
 	eventHandler.addEventListener("LoadItems", readItems);
+  eventHandler.addEventListener("DomLoaded", renderView);
 
-
-
-	view.start();
+  view.start();
 
   function readItems (response) {
     model.populate(response);

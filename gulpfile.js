@@ -1,7 +1,6 @@
 'use stric';
 const gulp = require('gulp');
 const	watch = require('gulp-watch');
-const sourcemaps = require('gulp-sourcemaps');
 const	browserify = require('gulp-browserify');
 const uglify = require('gulp-uglify');
 const	concat = require('gulp-concat');
