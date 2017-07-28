@@ -21,6 +21,22 @@ module.exports = function(config){
     return [].slice.call(DOM);
   }
 
+  HTMLElement.prototype.text = function(text) {
+    this.innerHTML = text;
+  }
+
+  function newElement(element, attr, text) {
+    var el = document.createElement(element);
+    for (var prop in attr) {
+      el.setAttribute(prop, attr[prop]);
+    }
+
+    if(text !== undefined){
+      el.text(text);
+    }
+    return el;
+  }
+
   var AJAXRequest = function(url, isCrossDomain, callback) {
     if(!isCrossDomain) {
       var xhr = new XMLHttpRequest();
@@ -66,6 +82,7 @@ module.exports = function(config){
     },
     dom: {
       DOMToArray: DOMToArray,
+      newElement : newElement
     }
   }
 }
